@@ -3,16 +3,24 @@ function search() {
 
   if (q === "月白大学") {
     window.location.href = "deleted-blog-01.html";
-} else if (q === "記憶残留現象と共同幻想") {
+}
+ else if (q === "記憶残留現象と共同幻想") {
   window.location.href = "research-presentation.html";
-} else if (q === "森高宵") {
+} 
+ else if (q === "森高宵") {
   window.location.href = "professor-moritaka.html";
-} else if (q === "呪い") {
+}
+ else if (q === "呪い") {
   window.location.href="deleted-blog-02.html";
-} else if (q === "美沙") {
+}
+ else if (q === "美沙") {
   window.location.href = "misa-profile.html";
-} else if (q === "善神信仰と呪成就の変遷") {
+}
+ else if (q === "善神信仰と呪成就の変遷") {
   window.location.href="research-curse.html";
+}
+ else if (q === "葬式") {
+  window.location.href = "deleted-blog-03.html";
 }
 
 
