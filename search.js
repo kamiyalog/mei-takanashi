@@ -28,6 +28,9 @@ else if (q === "新庄美沙") {
 else if (q === "黒羽文鳥") {
   window.location.href = "author-kurobane.html";
 }
+else if (q === "八朔伝承") {
+  window.location.href = "hassaku-legend.html";
+}
 
   } else {
     alert("該当する記事は見つかりませんでした");
