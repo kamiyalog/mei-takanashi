@@ -37,6 +37,9 @@ else if (q === "呪成就") {
 else if (q === "朝霧神社") {
   window.location.href = "asagiri-shrine.html";
 }
+else if (q === "真克神") {
+  window.location.href = "village-record.html";
+}
 
   } else {
     alert("該当する記事は見つかりませんでした");
