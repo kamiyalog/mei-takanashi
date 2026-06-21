@@ -40,6 +40,9 @@ else if (q === "朝霧神社") {
 else if (q === "真克神") {
   window.location.href = "village-record.html";
 }
+else if (q === "朱祓村") {
+  window.location.href = "akabara-ritual.html";
+}
 
   } else {
     alert("該当する記事は見つかりませんでした");
