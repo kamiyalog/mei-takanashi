@@ -276,7 +276,20 @@ opacity:0.6;
   font-size: 12px;
   border-radius: 4px;
 }
+.university-page {
+  background: #fff;
+}
 
+.info-block {
+  margin-top: 38px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.info-block h2 {
+  font-size: 20px;
+  margin: 0 0 18px;
+}
 @media (max-width: 800px) {
   .layout {
     grid-template-columns: 1fr;
