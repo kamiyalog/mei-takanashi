@@ -22,7 +22,9 @@ function search() {
  else if (q === "葬式") {
   window.location.href = "deleted-blog-03.html";
 }
-
+else if (q === "新庄美沙") {
+  window.location.href = "misa-belongings.html";
+}
 
 
   } else {
