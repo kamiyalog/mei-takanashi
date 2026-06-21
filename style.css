@@ -244,6 +244,24 @@ opacity:0.6;
 .footer-page {
   letter-spacing: 0.08em;
 }
+.article-image {
+  margin: 34px 0;
+}
+
+.article-image img {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.article-image figcaption {
+  margin-top: 12px;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
 
 @media (max-width: 800px) {
   .layout {
