@@ -262,6 +262,20 @@ opacity:0.6;
   color: #888;
   font-size: 13px;
 }
+.deleted-article {
+  border: 1px solid #ddd;
+  background: #fffdfd;
+}
+
+.deleted-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 4px 10px;
+  background: #f1f1f1;
+  color: #777;
+  font-size: 12px;
+  border-radius: 4px;
+}
 
 @media (max-width: 800px) {
   .layout {
