@@ -296,6 +296,33 @@ opacity:0.6;
   line-height: 2;
   color: #555;
 }
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-table th,
+.profile-table td {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 16px 12px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.profile-table th {
+  width: 150px;
+  color: #666;
+  background: #fafafa;
+  font-weight: 600;
+}
+
+.blackout {
+  display: inline-block;
+  background: #111;
+  color: #111;
+  padding: 0 14px;
+  user-select: none;
+}
 @media (max-width: 800px) {
   .layout {
     grid-template-columns: 1fr;
