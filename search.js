@@ -9,8 +9,10 @@ function search() {
   window.location.href = "professor-moritaka.html";
 } else if (q === "呪い") {
   window.location.href="deleted-blog-02.html";
-}else if (q === "美沙") {
+} else if (q === "美沙") {
   window.location.href = "misa-profile.html";
+} else if (q === "善神信仰と呪成就の変遷") {
+  window.location.href="research-curse.html";
 }
 
 
