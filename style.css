@@ -11,9 +11,15 @@ a {
 }
 
 .site-header {
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 40px;
+}
+
+.site-header-inner {
   max-width: 980px;
   margin: 0 auto;
-  padding: 70px 24px 45px;
+  padding: 48px 24px 40px;
 }
 
 .site-header h1 {
@@ -27,6 +33,27 @@ a {
   margin: 0;
   color: #666;
   line-height: 1.9;
+  font-size: 15px;
+}
+
+.site-title {
+  display: inline-block;
+  font-size: 34px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.site-title:hover {
+  opacity: 0.7;
+}
+
+.site-subtitle {
+  margin-top: 18px;
+  color: #666;
+  line-height: 2;
   font-size: 15px;
 }
 
@@ -169,16 +196,22 @@ footer {
   margin: 0 0 22px;
 }
 
-.article-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 28px;
-  font-size: 14px;
+.article-nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:30px;
+font-size:14px;
 }
 
-.article-nav a {
-  color: #555;
-  text-decoration: underline;
+.article-nav a{
+color:#666;
+text-decoration:none;
+transition:.2s;
+}
+
+.article-nav a:hover{
+opacity:0.6;
 }
 
 @media (max-width: 800px) {
@@ -203,4 +236,15 @@ footer {
   .site-header h1 {
     font-size: 28px;
   }
+}
+
+@media(max-width:800px){
+.site-title{
+font-size:28px;
+}
+
+.site-header-inner{
+padding:40px 24px 32px;
+}
+
 }
