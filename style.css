@@ -290,6 +290,12 @@ opacity:0.6;
   font-size: 20px;
   margin: 0 0 18px;
 }
+.simple-list {
+  margin: 0;
+  padding-left: 22px;
+  line-height: 2;
+  color: #555;
+}
 @media (max-width: 800px) {
   .layout {
     grid-template-columns: 1fr;
