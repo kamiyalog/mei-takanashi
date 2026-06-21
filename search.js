@@ -34,6 +34,9 @@ else if (q === "八朔伝承") {
 else if (q === "呪成就") {
   window.location.href = "deleted-blog-04.html";
 }
+else if (q === "朝霧神社") {
+  window.location.href = "asagiri-shrine.html";
+}
 
   } else {
     alert("該当する記事は見つかりませんでした");
