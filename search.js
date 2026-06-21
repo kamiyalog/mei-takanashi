@@ -7,6 +7,8 @@ function search() {
   window.location.href = "research-presentation.html";
 } else if (q === "森高宵") {
   window.location.href = "professor-moritaka.html";
+} else if (q === "呪い") {
+  window.location.href="deleted-blog-02.html";
 }
 
 
