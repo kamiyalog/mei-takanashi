@@ -1,15 +1,12 @@
-async function include(id, file){
+async function include(id, file) {
+  const target = document.getElementById(id);
+  if (!target) return;
 
-const response = await fetch(file);
-
-const html = await response.text();
-
-document.getElementById(id).innerHTML = html;
-
+  const response = await fetch(file);
+  const html = await response.text();
+  target.innerHTML = html;
 }
 
-include("header","header.html");
-
-include("footer","footer.html");
-
-include("profile","profile.html");
+include("header", "header.html");
+include("footer", "footer.html");
+include("profile", "profile.html");
