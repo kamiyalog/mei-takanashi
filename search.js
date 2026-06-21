@@ -31,6 +31,9 @@ else if (q === "黒羽文鳥") {
 else if (q === "八朔伝承") {
   window.location.href = "hassaku-legend.html";
 }
+else if (q === "呪成就") {
+  window.location.href = "deleted-blog-04.html";
+}
 
   } else {
     alert("該当する記事は見つかりませんでした");
