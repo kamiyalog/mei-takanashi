@@ -25,7 +25,9 @@ function search() {
 else if (q === "新庄美沙") {
   window.location.href = "misa-belongings.html";
 }
-
+else if (q === "黒羽文鳥") {
+  window.location.href = "author-kurobane.html";
+}
 
   } else {
     alert("該当する記事は見つかりませんでした");
