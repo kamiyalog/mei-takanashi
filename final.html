@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>最後のお願い</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="32">
+
+<div id="header"></div>
+
+<main class="article-page">
+
+  <article class="article-body">
+
+    <p class="deleted-label">最終確認</p>
+
+    <h1>最後のお願い</h1>
+
+    <p>
+      このゲームを公開しようとしてくれてるってことは、
+      私に起きたこと、そして私を探してくれたってことでいいのかな？
+    </p>
+
+    <p>
+      もしそうだったら、下の質問に答えてくれるかな？
+    </p>
+
+    <p>
+      答えてくれれば、私は自分を見失わずにすむから。
+    </p>
+
+    <div class="answer-box">
+
+      <label>村の本当の名前</label>
+      <input type="text" id="answer1" placeholder="〇〇村">
+
+      <label>呪いに使った道具</label>
+      <input type="text" id="answer2" placeholder="〇〇">
+
+      <label>神様の本当の名前</label>
+      <input type="text" id="answer3" placeholder="〇〇神">
+
+      <label>儀式を行う場所</label>
+      <input type="text" id="answer4" placeholder="〇〇山の〇〇">
+
+      <label>私の名前</label>
+      <input type="text" id="answer5" placeholder="〇〇〇">
+
+    </div>
+
+    <div class="center">
+      <button class="post-button" onclick="checkAnswer()">
+        回答する
+      </button>
+    </div>
+
+  </article>
+
+</main>
+
+<div id="footer"></div>
+
+<script src="include.js"></script>
+
+<script>
+function normalize(str) {
+  return str.replace(/\s/g, "").replace(/　/g, "");
+}
+
+function checkAnswer() {
+  const a1 = normalize(document.getElementById("answer1").value);
+  const a2 = normalize(document.getElementById("answer2").value);
+  const a3 = normalize(document.getElementById("answer3").value);
+  const a4 = normalize(document.getElementById("answer4").value);
+  const a5 = normalize(document.getElementById("answer5").value);
+
+  if (
+    a1 === "朱祓村" &&
+    a2 === "呪符" &&
+    a3 === "真克神" &&
+    a4 === "御影山の忘れ滝" &&
+    a5 === "高無メイ"
+  ) {
+    window.location.href = "ending-good.html";
+  } else {
+    window.location.href = "ending-bad.html";
+  }
+}
+</script>
+
+</body>
+</html>

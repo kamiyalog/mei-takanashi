@@ -43,6 +43,9 @@ else if (q === "真克神") {
 else if (q === "朱祓村") {
   window.location.href = "akabara-ritual.html";
 }
+else if (q === "下書き") {
+window.location.href="draft.html";
+}
 
   } else {
     alert("該当する記事は見つかりませんでした");
