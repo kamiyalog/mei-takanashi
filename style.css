@@ -213,6 +213,32 @@ transition:.2s;
 .article-nav a:hover{
 opacity:0.6;
 }
+.answer-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 42px 0;
+}
+
+.answer-box label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.answer-box input {
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.answer-box input:focus {
+  outline: none;
+  border-color: #999;
+  background: #fafafa;
+}
 
 @media (max-width: 800px) {
   .article-body {
@@ -331,6 +357,62 @@ opacity:0.6;
 
 .book-list li {
   margin-bottom: 6px;
+}
+.center {
+  text-align: center;
+}
+
+.post-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 48px;
+  font-size: 16px;
+  border: none;
+  border-radius: 999px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.post-button:hover {
+  opacity: 0.8;
+}
+.ending-page {
+  text-align: center;
+}
+
+.ending-page h1 {
+  margin-bottom: 36px;
+}
+
+.ending-image {
+  margin: 48px auto;
+}
+
+.ending-image img {
+  width: 100%;
+  max-width: 680px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.share-section {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #eee;
+}
+
+.x-share-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 14px 34px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
 }
 @media (max-width: 800px) {
   .layout {

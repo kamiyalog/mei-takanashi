@@ -1,4 +1,4 @@
-const TOTAL_PAGES = 33;
+const TOTAL_PAGES = 34;
 
 async function include(id, file) {
   const target = document.getElementById(id);
