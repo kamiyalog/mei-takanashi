@@ -1,5 +1,11 @@
-function search() {
-  const q = document.getElementById("searchBox").value.trim();
+function searchWord(){
+
+const q=document
+.getElementById("searchInput")
+.value
+.trim();
+
+if(q==="") return;
 
   if (q === "月白大学") {
     window.location.href = "deleted-blog-01.html";
@@ -51,3 +57,22 @@ window.location.href="draft.html";
     alert("該当する記事は見つかりませんでした");
   }
 }
+document.addEventListener("DOMContentLoaded",()=>{
+
+const input=document.getElementById("searchInput");
+
+if(input){
+
+input.addEventListener("keydown",(e)=>{
+
+if(e.key==="Enter"){
+
+searchWord();
+
+}
+
+});
+
+}
+
+});
