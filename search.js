@@ -11,7 +11,7 @@ function searchWord() {
     window.location.href = "deleted-blog-02.html";
   } else if (q === "美沙") {
     window.location.href = "misa-profile.html";
-  } else if (q === "善神信仰と呪成就の変遷") {
+  } else if (q === "善神信仰と呪いの変遷") {
     window.location.href = "research-curse.html";
   } else if (q === "葬式") {
     window.location.href = "deleted-blog-03.html";
