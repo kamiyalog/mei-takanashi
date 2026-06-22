@@ -414,6 +414,9 @@ opacity:0.6;
   text-decoration: none;
   font-size: 15px;
 }
+.good-ending {
+  background: #fff;
+}
 @media (max-width: 800px) {
   .layout {
     grid-template-columns: 1fr;
