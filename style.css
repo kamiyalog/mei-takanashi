@@ -514,7 +514,59 @@ opacity:.8;
     font-size: 28px;
   }
 }
+.bad-end{
 
+background:#0d0d0d;
+
+color:#eee;
+
+}
+
+.bad-end .article-body{
+
+background:#0d0d0d;
+
+color:#eee;
+
+}
+
+.bad-end .deleted-label{
+
+background:#222;
+
+color:#aaa;
+
+}
+
+.bad-end .post-date{
+
+color:#888;
+
+}
+
+.bad-end h1{
+
+color:#fff;
+
+}
+
+.bad-end #header{
+
+background:#0d0d0d;
+
+border-bottom:1px solid #222;
+
+}
+
+.bad-end #footer{
+
+background:#0d0d0d;
+
+border-top:1px solid #222;
+
+color:#777;
+
+}
 @media(max-width:800px){
 .site-title{
 font-size:28px;
