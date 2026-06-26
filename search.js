@@ -30,7 +30,7 @@ function searchWord() {
   } else if (q === "朱祓村") {
     window.location.href = "akabara-ritual.html";
   } else if (q === "修正版祭事記録") {
-    window.location.href = "akabara-ritual.html";
+    window.location.href = "new-akabara-ritual.html";
   } else if (q === "下書き") {
     window.location.href = "draft.html";
   } else {
