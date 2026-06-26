@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-page="32">
+<body data-page="33">
 
 <div id="header"></div>
 
@@ -19,43 +19,44 @@
 
     <p class="deleted-label">最終確認</p>
 
-    <h1>最後のお願い</h1>
+    <h1>お願い</h1>
 
     <p>
-      このゲームを公開しようとしてくれてるってことは、
-      私に起きたこと、そして私を探してくれたってことでいいのかな？
+      ここのページが残っているってことは、 <br>
+      たぶん、私はもう私のことを忘れてきてるんだと思う。
     </p>
 
     <p>
-      もしそうだったら、下の質問に答えてくれるかな？
+      地図は持った。けど、忘れちゃったらあんまり意味ない。
     </p>
 
     <p>
-      答えてくれれば、私は自分を見失わずにすむから。
+	だから、お願い。教えて。<br>
+	そうすれば私は自分を見失わずにすむから。
     </p>
 
     <div class="answer-box">
 
       <label>村の本当の名前</label>
-      <input type="text" id="answer1" placeholder="〇〇村">
+      <input type="text" id="answer1" placeholder="入力例：〇〇村">
 
       <label>呪いに使った道具</label>
-      <input type="text" id="answer2" placeholder="〇〇">
+      <input type="text" id="answer2" placeholder="入力例：〇〇〇のお守り">
 
       <label>神様の本当の名前</label>
-      <input type="text" id="answer3" placeholder="〇〇神">
+      <input type="text" id="answer3" placeholder="入力例：〇〇神">
 
       <label>儀式を行う場所</label>
-      <input type="text" id="answer4" placeholder="〇〇山の〇〇">
+      <input type="text" id="answer4" placeholder="入力例：〇〇山の〇〇">
 
-      <label>私の名前</label>
-      <input type="text" id="answer5" placeholder="〇〇〇〇">
+      <label>名前</label>
+      <input type="text" id="answer5" placeholder="入力例：〇〇〇〇、または〇〇〇〇と〇〇〇〇">
 
     </div>
 
     <div class="center">
       <button class="post-button" onclick="checkAnswer()">
-        回答する
+        教える
       </button>
     </div>
 
@@ -79,17 +80,34 @@ function checkAnswer() {
   const a4 = normalize(document.getElementById("answer4").value);
   const a5 = normalize(document.getElementById("answer5").value);
 
-  if (
+  const common =
     a1 === "朱祓村" &&
-    a2 === "呪符" &&
-    a3 === "真克神" &&
+    a2 === "呪成就のお守り" &&
+    a3 === "真克神";
+
+  // TRUE END
+  if (
+    common &&
+    a4 === "御影山の見覚祠" &&
+    (a5 === "高無メイと新庄美沙" ||
+     a5 === "新庄美沙と高無メイ")
+  ) {
+    window.location.href = "ending-true.html";
+    return;
+  }
+
+  // GOOD END
+  if (
+    common &&
     a4 === "御影山の忘れ滝" &&
     a5 === "高無メイ"
   ) {
     window.location.href = "ending-good.html";
-  } else {
-    window.location.href = "ending-bad.html";
+    return;
   }
+
+  // BAD END
+  window.location.href = "ending-bad.html";
 }
 </script>
 

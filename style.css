@@ -567,6 +567,27 @@ border-top:1px solid #222;
 color:#777;
 
 }
+.true-ending {
+  background: #fff;
+}
+
+.true-message {
+  margin-top: 50px;
+  padding: 32px;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+  text-align: left;
+}
+
+.true-message h2 {
+  margin-top: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.true-message p {
+  line-height: 2;
+}
 @media(max-width:800px){
 .site-title{
 font-size:28px;
