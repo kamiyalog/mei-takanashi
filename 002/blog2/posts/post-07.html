@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>鍵記事｜メモとか独り言</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <h1 class="site-title">
+        <a href="../index.html">メモとか独り言</a>
+      </h1>
+
+      <form
+        class="search-form"
+        action="../../search/index.html"
+        method="get"
+      >
+        <input
+          name="q"
+          type="search"
+          placeholder="サイト内検索"
+          aria-label="検索ワード"
+        >
+
+        <button type="submit">検索</button>
+      </form>
+
+    </div>
+  </header>
+
+  <main>
+
+    <article class="article">
+
+      <div class="meta">
+        投稿No.7　2026年7月12日
+      </div>
+
+      <h1>鍵記事</h1>
+
+      <section id="password-area" class="password-area">
+
+        <p>
+          この記事を読むには暗証番号が必要です。
+        </p>
+
+        <form id="password-form" class="password-form">
+
+          <label for="password-input">
+            暗証番号
+          </label>
+
+          <div class="password-controls">
+
+            <input
+              id="password-input"
+              type="password"
+              inputmode="numeric"
+              autocomplete="off"
+              maxlength="6"
+              aria-describedby="password-message"
+            >
+
+            <button type="submit">
+              開く
+            </button>
+
+          </div>
+
+        </form>
+
+        <p
+          id="password-message"
+          class="password-message"
+          aria-live="polite"
+        ></p>
+
+      </section>
+
+      <div id="locked-content" class="article-body locked-content" hidden>
+
+        <p>
+          全部見られてた。<br>
+          なんかおかしいと思って、ばれないように部屋を調べてみた。
+        </p>
+
+        <p>
+          そしたら、あった。<br>
+          隠しカメラ。　<br>
+          たぶん、盗聴器もあるんじゃないかな。
+        </p>
+
+        <p>
+          あと、なんでかわからないけど、パソコンのファイル内から変な記録見つけた。<br>
+          監視記録2
+        </p>
+
+        <p>
+          本当にわからない。
+        </p>
+
+        <p>
+          でも、今危ないことはわかる。<br>
+          だから、今作ってるゲームに、<br>
+          これらの証拠を警察に送信する用のものを入れておいた。<br>
+          何重にも隠して書いたからきっとバレないはず。
+        </p>
+
+        <p>
+          これで警察が動いてくれるかわからないけど…。
+        </p>
+
+        <p>
+          私が家の回線でやったらばれちゃうかもしれないから、<br>これを見てくれている誰かがやってくれることを願う。
+        </p>
+
+        <p>
+          方法は、これまでの記事に何を頼めばいいか仕込んどいた。<br>
+          ここを開けたなら、きっとわかると思う。
+        </p>
+
+        <p>
+          もし、見てくれてる人がいるなら、お願い。<br>
+          助けて…。
+        </p>
+
+        <div class="game-link-area">
+          <a class="game-button" href="../../game/index.html">
+            ゲームをプレイする
+          </a>
+        </div>
+
+      </div>
+
+      <nav class="post-nav">
+        <span>
+          ← <a href="./post-06.html">現実逃避</a>
+        </span>
+
+        <span></span>
+      </nav>
+
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>
+      このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。
+    </span>
+
+    <span class="page-no">24/32</span>
+  </footer>
+
+  <script>
+    "use strict";
+
+    const passwordForm = document.getElementById("password-form");
+    const passwordInput = document.getElementById("password-input");
+    const passwordMessage = document.getElementById("password-message");
+    const passwordArea = document.getElementById("password-area");
+    const lockedContent = document.getElementById("locked-content");
+
+    passwordForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (passwordInput.value === "134652") {
+        passwordArea.hidden = true;
+        lockedContent.hidden = false;
+        return;
+      }
+
+      passwordMessage.textContent = "暗証番号が違います。";
+      passwordInput.value = "";
+      passwordInput.focus();
+    });
+  </script>
+
+</body>
+</html>
