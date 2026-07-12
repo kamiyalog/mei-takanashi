@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BADEND｜高無メイ監視事件</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <main class="ending-page">
+
+    <section class="ending-card">
+
+      <p class="ending-label">BADEND</p>
+
+      <p>これからは、ずーっと一緒ですよ？</p>
+
+      <figure class="ending-visual">
+        <img
+          src="./images/bad_end.jpg"
+          alt="血の海に沈む高無メイを、青木葵がいとおしそうに抱きしめている"
+        >
+      </figure>
+
+      <div class="share-area">
+
+        <a
+          id="x-share-button"
+          class="x-share-button"
+          href="https://note.com/mei_takanashi/n/n05e0d0a6d08d?app_launch=false"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Xでシェアする
+        </a>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>
+      このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。
+    </span>
+
+    <span class="page-no">31/32</span>
+  </footer>
+
+  <script>
+    "use strict";
+
+    const shareText =
+      "ずっと一緒\n#ARG #高無メイ監視事件";
+
+    const shareUrl = "https://note.com/mei_takanashi/n/n05e0d0a6d08d?app_launch=false";
+
+    const xShareButton =
+      document.getElementById("x-share-button");
+
+    xShareButton.href =
+      "https://twitter.com/intent/tweet" +
+      "?text=" + encodeURIComponent(shareText) +
+      "&url=" + encodeURIComponent(shareUrl);
+  </script>
+
+</body>
+</html>

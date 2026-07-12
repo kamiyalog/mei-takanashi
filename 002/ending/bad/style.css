@@ -1,0 +1,145 @@
+:root {
+  --bg: #100d0e;
+  --paper: #1b1618;
+  --ink: #eee7e9;
+  --muted: #a8979d;
+  --accent: #8f3346;
+  --accent-dark: #6f2435;
+  --line: #49353b;
+  --x: #050505;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at center,
+      #211418 0%,
+      var(--bg) 70%
+    );
+  color: var(--ink);
+  font-family:
+    "Yu Gothic",
+    "Hiragino Kaku Gothic ProN",
+    sans-serif;
+  line-height: 1.8;
+}
+
+.ending-page {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 110px);
+  padding: 42px 20px;
+}
+
+.ending-card {
+  width: min(820px, 100%);
+  padding: 34px;
+  background: rgba(27, 22, 24, 0.97);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+.ending-label {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+}
+
+.ending-card h1 {
+  margin: 0 0 28px;
+  color: #f1dce2;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.ending-visual {
+  margin: 0;
+}
+
+.ending-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  filter: brightness(0.88) saturate(0.85);
+}
+
+.share-area {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.x-share-button,
+.note-link {
+  display: inline-block;
+  min-width: 180px;
+  padding: 11px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.x-share-button {
+  background: var(--x);
+  color: #ffffff;
+  border: 1px solid #292929;
+}
+
+.note-link {
+  border: 1px solid var(--accent);
+  color: #d9a5b1;
+  background: transparent;
+}
+
+.x-share-button:hover,
+.note-link:hover {
+  opacity: 0.85;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 22px 20px 34px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.page-no {
+  white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+  .ending-card {
+    padding: 24px 18px;
+  }
+
+  .share-area {
+    flex-direction: column;
+  }
+
+  .x-share-button,
+  .note-link {
+    width: 100%;
+  }
+
+  .site-footer {
+    align-items: flex-end;
+  }
+}
