@@ -1,0 +1,134 @@
+:root {
+  --bg: #f4f1ec;
+  --paper: #ffffff;
+  --ink: #302c28;
+  --muted: #817970;
+  --accent: #7e5266;
+  --line: #ded7cf;
+  --x: #111111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family:
+    "Yu Gothic",
+    "Hiragino Kaku Gothic ProN",
+    sans-serif;
+  line-height: 1.8;
+}
+
+.ending-page {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 110px);
+  padding: 42px 20px;
+}
+
+.ending-card {
+  width: min(820px, 100%);
+  padding: 34px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(52, 42, 35, 0.08);
+  text-align: center;
+}
+
+.ending-label {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+}
+
+.ending-card h1 {
+  margin: 0 0 28px;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.4;
+}
+
+.ending-visual {
+  margin: 0;
+}
+
+.ending-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.share-area {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.x-share-button,
+.note-link {
+  display: inline-block;
+  min-width: 180px;
+  padding: 11px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.x-share-button {
+  background: var(--x);
+  color: #ffffff;
+}
+
+.note-link {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: #ffffff;
+}
+
+.x-share-button:hover,
+.note-link:hover {
+  opacity: 0.88;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 22px 20px 34px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.page-no {
+  white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+  .ending-card {
+    padding: 24px 18px;
+  }
+
+  .share-area {
+    flex-direction: column;
+  }
+
+  .x-share-button,
+  .note-link {
+    width: 100%;
+  }
+
+  .site-footer {
+    align-items: flex-end;
+  }
+}
