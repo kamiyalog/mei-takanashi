@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>作りかけの注文ゲーム</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <header class="game-header">
+    <div class="header-inner">
+      <div>
+        <p class="todo">ToDo：謎を仕込む</p>
+        <h1>居酒屋 注文パネル</h1>
+      </div>
+
+      <span class="status-label">制作中</span>
+    </div>
+  </header>
+
+  <main class="game-layout">
+
+    <section class="menu-area">
+
+      <div class="section-heading">
+        <h2>メニュー</h2>
+        <p>商品を選んで注文リストに追加してください。</p>
+      </div>
+
+      <div id="menu-list" class="menu-list">
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>唐揚げ</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="唐揚げ"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>ビール</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="ビール"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>お好み焼き</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="お好み焼き"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>焼酎</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="焼酎"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>杏仁豆腐</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="杏仁豆腐"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>コーラ</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="コーラ"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>ピータン</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="ピータン"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>ウーロン茶</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="ウーロン茶"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>醤油ラーメン</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="醤油ラーメン"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>オレンジジュース</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="オレンジジュース"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>みそラーメン</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="みそラーメン"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>日本酒</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="日本酒"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>しおラーメン</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="しおラーメン"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>各種カクテル</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="各種カクテル"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>麻婆豆腐</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="麻婆豆腐"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>餃子</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="餃子"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>焼きそば</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="焼きそば"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+        <article class="menu-card">
+          <div class="image-placeholder">画像は後で作る予定</div>
+          <h3>じゃがバター</h3>
+          <button
+            class="add-button"
+            type="button"
+            data-item="じゃがバター"
+          >
+            注文リストに入れる
+          </button>
+        </article>
+
+      </div>
+
+    </section>
+
+    <aside class="order-panel">
+
+      <h2>注文リスト</h2>
+
+      <div
+        id="empty-message"
+        class="empty-message"
+      >
+        商品が入っていません。
+      </div>
+
+      <ul
+        id="order-list"
+        class="order-list"
+      ></ul>
+
+      <button
+        id="order-button"
+        class="order-button"
+        type="button"
+      >
+        注文する
+      </button>
+
+    </aside>
+
+  </main>
+
+  <div
+    id="message-overlay"
+    class="message-overlay"
+    role="status"
+    aria-live="polite"
+    hidden
+  >
+    <div id="message-box" class="message-box"></div>
+  </div>
+
+  <footer class="site-footer">
+    <span>
+      このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。
+    </span>
+
+    <span class="page-no">30/32</span>
+  </footer>
+
+  <script src="./game.js"></script>
+
+</body>
+</html>

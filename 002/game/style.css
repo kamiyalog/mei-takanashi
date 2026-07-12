@@ -1,0 +1,472 @@
+:root {
+  --bg: #f3eee7;
+  --paper: #ffffff;
+  --panel: #ffffff;
+  --panel-light: #faf7f2;
+  --ink: #342f2b;
+  --muted: #857c74;
+  --accent: #d46a2b;
+  --accent-dark: #b9551f;
+  --header: #7a5140;
+  --header-dark: #5e3d30;
+  --line: #ddd4cb;
+  --danger: #b64f4f;
+  --success: #5c8b63;
+  --shadow: rgba(77, 56, 43, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)),
+    repeating-linear-gradient(
+      90deg,
+      #eee6dc 0,
+      #eee6dc 70px,
+      #f3ece3 70px,
+      #f3ece3 140px
+    );
+  color: var(--ink);
+  font-family:
+    "Yu Gothic",
+    "Hiragino Kaku Gothic ProN",
+    sans-serif;
+  line-height: 1.7;
+}
+
+/* ヘッダー */
+
+.game-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      180deg,
+      var(--header) 0%,
+      var(--header-dark) 100%
+    );
+  border-bottom: 1px solid #4f3228;
+  box-shadow: 0 4px 16px rgba(58, 37, 27, 0.18);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 14px 22px;
+}
+
+.game-header h1 {
+  margin: 1px 0 0;
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.todo {
+  margin: 0;
+  color: #ead9d0;
+  font-family: monospace;
+  font-size: 0.78rem;
+}
+
+.status-label {
+  display: inline-block;
+  padding: 5px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+/* 全体レイアウト */
+
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 24px;
+  max-width: 1240px;
+  margin: 34px auto;
+  padding: 0 22px;
+}
+
+.menu-area,
+.order-panel {
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 14px 34px var(--shadow);
+}
+
+.menu-area {
+  padding: 26px;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* メニュー一覧 */
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  padding: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  box-shadow: 0 5px 14px rgba(82, 59, 43, 0.06);
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-2px);
+  background: var(--panel-light);
+  border-color: #c9b7a8;
+  box-shadow: 0 8px 20px rgba(82, 59, 43, 0.11);
+}
+
+.image-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 130px;
+  padding: 14px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #f6f1eb,
+      #f6f1eb 8px,
+      #fbf8f4 8px,
+      #fbf8f4 16px
+    );
+  border: 2px dashed #d5c9bd;
+  border-radius: 7px;
+  color: #a2978d;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.menu-card h3 {
+  margin: 15px 0 12px;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: normal;
+}
+
+.add-button {
+  margin-top: auto;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(171, 76, 25, 0.18);
+}
+
+.add-button:hover {
+  background: var(--accent-dark);
+}
+
+.add-button:active {
+  transform: translateY(1px);
+}
+
+/* 注文パネル */
+
+.order-panel {
+  position: sticky;
+  top: 96px;
+  align-self: start;
+  padding: 22px;
+}
+
+.order-panel h2 {
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.25rem;
+}
+
+.empty-message {
+  padding: 22px 10px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.order-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 11px 12px;
+  background: #faf7f3;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.order-item-name {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.order-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.quantity {
+  min-width: 24px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.quantity-button,
+.remove-button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.quantity-button:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.remove-button {
+  color: var(--danger);
+}
+
+.remove-button:hover {
+  border-color: var(--danger);
+  background: #fff4f4;
+}
+
+.order-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--accent);
+  color: #ffffff;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(171, 76, 25, 0.2);
+}
+
+.order-button:hover {
+  background: var(--accent-dark);
+}
+
+.order-button:disabled {
+  background: #c6beb6;
+  color: #f7f4f1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* メッセージ表示 */
+
+.message-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(24, 17, 13, 0.78);
+}
+
+.message-overlay[hidden] {
+  display: none;
+}
+
+.message-box {
+  width: min(520px, 100%);
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 25px 70px rgba(29, 18, 12, 0.35);
+  color: var(--ink);
+  text-align: center;
+}
+
+.message-box h2 {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+}
+
+.message-box p {
+  margin: 0;
+  color: #635b54;
+}
+
+.message-box.success {
+  border-color: var(--success);
+}
+
+.message-box.error {
+  border-color: var(--danger);
+}
+
+.message-close {
+  margin-top: 22px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.message-close:hover {
+  background: var(--accent-dark);
+}
+
+/* フッター */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1240px;
+  margin: 70px auto 0;
+  padding: 24px 22px 36px;
+  border-top: 1px solid #d3c8bd;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.page-no {
+  white-space: nowrap;
+}
+
+/* タブレット */
+
+@media (max-width: 980px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .order-panel {
+    position: static;
+  }
+
+  .menu-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* スマートフォン */
+
+@media (max-width: 620px) {
+  .header-inner {
+    align-items: flex-start;
+  }
+
+  .game-header h1 {
+    font-size: 1.15rem;
+  }
+
+  .game-layout {
+    margin-top: 22px;
+    padding: 0 12px;
+  }
+
+  .menu-area {
+    padding: 18px 14px;
+  }
+
+  .menu-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .menu-card {
+    min-height: 220px;
+    padding: 10px;
+  }
+
+  .image-placeholder {
+    min-height: 100px;
+    font-size: 0.68rem;
+  }
+
+  .menu-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .add-button {
+    padding: 9px 7px;
+    font-size: 0.78rem;
+  }
+
+  .order-panel {
+    padding: 18px 14px;
+  }
+
+  .site-footer {
+    align-items: flex-end;
+    padding-inline: 14px;
+  }
+}
